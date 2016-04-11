@@ -1,0 +1,128 @@
+@charset "UTF-8";
+a,
+abbr,
+acronym,
+address,
+applet,
+b,
+big,
+blockquote,
+body,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+u,
+ul,
+var {
+  margin: 0;
+  padding: 0;
+  font-style: normal; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+li,
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+html,
+body {
+  width: 100%; }
+
+html {
+  height: 100%; }
+
+body {
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased; }
+  [data-dpr="2"] body {
+    font-size: 24px; }
+  [data-dpr="2.5"] body {
+    font-size: 30px; }
+  [data-dpr="2.75"] body {
+    font-size: 33px; }
+  [data-dpr="3"] body {
+    font-size: 36px; }
+  [data-dpr="4"] body {
+    font-size: 48px; }
+
+/*主页面*/
+img {
+  width: 100%;
+  display: block; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+/*# sourceMappingURL=base.css.map */

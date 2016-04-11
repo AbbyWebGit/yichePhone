@@ -1,0 +1,430 @@
+@charset "utf-8";
+@import "base";
+.topTitle {
+    position:fixed;
+    @include px2px('padding-left', 10);
+    @include px2px('padding-right', 10);
+    @include px2rem('height', 70);
+    @include px2rem('line-height', 70);
+    color: #777777;
+    background-color:#fff;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100000;
+    ul {
+        display: -webkit-flex;
+        flex-direction: row;
+        justify-content: space-around;
+        li {
+            display: inline-block;
+        }
+        a {
+            color: black;
+            padding-bottom: 3px;
+            @include px2px('font-size', 14);
+            color: #777;
+            &.cur {
+                @include px2px('font-size', 15);
+                font-weight: 700;
+                color: #2f2f2f;
+                border-bottom: 10px #C90C22 solid;
+                @include px2px('border-width', 5);
+            }
+        }
+    }
+}
+
+// 热门车型
+.hotCarsTop {
+    width: 100%;
+   @include px2rem('margin-top', 70);
+}
+
+.carInfoCard {
+    position: relative;
+    .carTag {
+        position: absolute;
+    }
+    .carInfo {
+        .car_pic {}
+        .car_information {
+            color: #555;
+            .car_title {
+                font-weight: bold;
+                @include px2px("font-size", 14);
+                @include px2px("line-height", 14);
+                &.title_margin {
+                    @include px2rem("margin-bottom", 8);
+                    @include px2rem("margin-top", 30);
+                }
+            }
+            .car_market_price {
+                font-weight: normal;
+                @include px2px("font-size", 10);
+                /*价格加横线*/
+                text-decoration: line-through;
+                //padding: 10px 0;
+            }
+            .car_off{
+                display: table;
+                width: 100%;
+                margin: 2px 0;
+                //@include px2px("line-height", 20);
+            }
+            .car_off_info {
+                display: table-row;
+                width: 100%;
+                & > div{
+                    display: table-cell;
+                    width: 50%;
+                    vertical-align: middle;
+                    &:last-child{
+                        text-align: right;
+                    }
+                    &:first-child{
+                        text-align: left;
+                    }
+                    .tag_type_1{
+                        i.tag{
+                            vertical-align: 3px;
+                        }
+                    }
+                    .tag_type_2{
+                        i.tag{
+                            vertical-align: 2px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+//hot icon
+.hotIcon {
+    position: absolute;
+    text-align: center;
+    color: #FFFFFF;
+    @include px2rem("width", 58);
+    @include px2rem("height", 61);
+    @include px2rem("padding-top", 6);
+    @include px2rem("padding-bottom", 6);
+    background-image: url(../images/rexiao@2x.png);
+    @include back;
+    p {
+        //margin-top: 1px;
+        &.tag_name {
+            @include px2px("font-size", 14);
+            @include px2px("line-height", 16);
+            font-weight: 700;
+        }
+        &.top_3 {
+            @include px2px("font-size", 17);
+            @include px2px("line-height", 14);
+            font-family: 'helvetica';
+            font-weight: bold;
+        }
+    }
+}
+
+//good icon
+.goodIcon {
+    position: absolute;
+    text-align: center;
+    color: #FFFFFF;
+    @include px2rem("height", 66);
+    @include px2rem("width", 62);
+    @include px2px("font-size", 14);
+    @include back;
+    font-weight: 700;
+    &.type_gold {
+        background-image: url(../images/discount@2x.png);
+        @include px2rem("line-height", 66);
+    }
+    &.type_gold_spc {
+        background-image: url(../images/discount@2x.png);
+        @include px2rem("padding-top", 10);
+        @include px2rem("line-height", 23);
+        @include px2px("font-size", 13);
+    }
+    &.type_purple {
+        background-image: url(../images/yearIcon@2x.png);
+        @include px2rem("padding-top", 10);
+        @include px2rem("line-height", 23);
+        @include px2px("font-size", 13);
+    }
+}
+
+//tag
+.tag {
+    font-weight: normal;
+    color: #fff;
+    display: inline-block;
+    @include px2px("font-size", 10);
+    @include px2rem("height", 20);
+    @include px2rem("line-height", 19);
+    @include px2rem('padding-left', 3);
+    @include px2rem('padding-right', 3);
+    @include px2rem('margin-right', 4);
+    border-radius: 2px;
+    overflow: hidden;
+    //vertical-align: 5px;
+    &.red {
+        background-color: #E31436;
+    }
+    &.grey {
+        background-color: #565656;
+    }
+}
+
+.tag_type_1 {
+    color: #E31436;
+    @include px2px("font-size", 16);
+    @include px2px("line-height", 16);
+    font-weight: 900;
+    .tag{
+        //@include px2rem("margin-top",7);
+    }
+}
+.tag_type_2 {
+    color: #2F2F2F;
+    @include px2px("font-size", 14);
+    font-weight: 700;
+    .tag{
+        //@include px2rem("margin-top",7);
+    }
+}
+
+.tag_type_3 {
+    color: #2f2f2f;
+    @include px2px("font-size", 10);
+    .off_price {
+        @include px2px("font-size", 16);
+        font-weight: 700;
+    }
+    &.color_red {
+        color: #E31436;
+    }
+}
+
+.operation_button {
+    background-color: #E31436;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 8px;
+    margin-top: 2px;
+    p {
+        font-size: 11px;
+        font-weight: bold;
+        color: #fff;
+    }
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    // @include px2rem('margin-top', 10);
+    @include px2rem('height', 42);
+    @include px2rem('line-height', 42);
+    @include px2px('font-size', 13);
+    &.red_btn {
+        background-color: #E31436;
+    }
+}
+
+.hotCarsSort {
+    width: 100%;
+    background-color: #FFFFFF;
+    @include px2rem('padding-top', 14);
+    @include px2rem('padding-bottom', 16);
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling:touch;
+    .hotCarsIn {
+        ul {
+            white-space: nowrap;
+            font-size: 0;
+            position:relative;
+            li {
+                display: inline-block;
+                position: relative;
+                @include px2rem("width", 270);
+                @include px2rem('padding-left', 10);
+                @include px2rem('padding-right', 10);
+                border-right: 1px #D2D2D2 solid;
+                &:last-child {
+                    border: none;
+                }
+                .carInfoCard{
+                    .carInfo{
+                        .car_information{
+                            .car_off_info{
+                                & > div{
+                                    //vertical-align: bottom;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin blockBg {
+    @include px2rem("padding-top", 50);
+    width: 100%;
+    background-color: #C90C22;
+    border: #A0081A  solid;
+    @include px2rem("border-width", 2);
+}
+
+.goodCars {
+    @include px2rem("padding-top", 30);
+    width: 100%;
+    background-color: #C90C22;
+    //border-bottom: 2px #A0081A solid;
+     border: #A0081A  solid;
+    @include px2rem("border-width", 2);
+    .goodCarsSort {
+        overflow: hidden;
+    }
+}
+
+.downPay {
+    @include blockBg;
+}
+
+.usedCar {
+    @include blockBg;
+
+}
+
+.tenCars {
+    @include blockBg;
+}
+
+.fifteenCars {
+    @include blockBg;
+}
+
+.twentyCars {
+    @include blockBg;
+   
+}
+
+.goodCarsTitle {
+    text-align: center;
+    position: relative;
+    @include px2px("margin-bottom", 12);
+    @include px2px("font-size", 17);
+    p {
+        background-color: #C90C22;
+        display: inline-block;
+        @include px2rem("height", 35);
+        @include px2rem("line-height", 35);
+        color: #FFF;
+        font-weight: bold;
+        padding: 3px 12px;
+        border: #E48691 solid;
+        @include px2rem("border-width", 1);
+        position: relative;
+        z-index: 2;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include px2rem("width", 430);
+        @include px2rem("margin-left", -215);
+        border-bottom: 1px solid #E48691;
+    }
+    .blankTitle {
+        background-color: #C90C22;
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        @include px2rem("padding-left", 38);
+        @include px2rem("padding-right", 38);
+        text-align: center;
+    }
+}
+
+.goodCarsSort {
+    @include px2rem("padding-left", 20);
+    @include px2rem("padding-right", 20);
+    overflow: hidden;
+    ul {
+        li {
+            float: left;
+            position: relative;
+            @include px2rem("padding", 8);
+            @include px2rem("width", 278);
+            background-color: #FFFFFF;
+            @include px2rem("margin-bottom", 12);
+            &:nth-child(2n) {
+                @include px2rem("margin-left", 12);
+            }
+        }
+    }
+}
+
+.moreCars {
+    @include px2rem("line-height", 50);
+    text-align: center;
+    @include px2px("font-size", 9);
+    font-weight: 700;
+    color: #A0081A;
+}
+
+.tenCarsTitle {
+    text-align: center;
+    position: relative;
+    @include px2px("margin-bottom", 12);
+    @include px2px("font-size", 15);
+    @include px2rem("margin-left", 20);
+    @include px2rem("margin-right", 20);
+    p {
+        color: #FFFFFF;
+        border: 1px #fff solid;
+        @include px2rem("padding-top", 8);
+        @include px2rem("padding-bottom", 8);
+    }
+}
+
+.tenCarsSort {
+    @include px2rem("padding-left", 20);
+    @include px2rem("padding-right", 20);
+    overflow: hidden;
+    ul {
+        li {
+            float: left;
+            position: relative;
+            @include px2rem("padding", 10);
+            @include px2rem("width", 280);
+            //width: 50%;
+            background-color: #FFFFFF;
+            &:nth-child(2n) {
+                border-left: 1px #C9C9C9 solid;
+                margin-left: -1px;
+            }
+        }
+        .bt_border {
+            border-bottom: 1px #C9C9C9 solid;
+        }
+    }
+}
+
+.botBanner {
+    @include px2px("padding-top", 20);
+    width: 100%;
+    background-color: #C90C22;
+    overflow: hidden;
+}

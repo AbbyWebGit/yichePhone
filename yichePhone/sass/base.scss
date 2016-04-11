@@ -1,0 +1,161 @@
+@charset "utf-8";
+a,
+abbr,
+acronym,
+address,
+applet,
+b,
+big,
+blockquote,
+body,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+u,
+ul,
+var {
+    margin: 0;
+    padding: 0;
+    font-style: normal
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden
+}
+
+li,
+ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+@mixin back {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@mixin px2px($name, $px) {
+    #{$name}: $px+px;
+    [data-dpr="2"] & {
+        #{$name}: $px * 2px;
+    }
+    [data-dpr="2.5"] & {
+        #{$name}: $px * 2.5px;
+    }
+    [data-dpr="2.75"] & {
+        #{$name}: $px * 2.75px;
+    }
+    [data-dpr="3"] & {
+        #{$name}: $px * 3px;
+    }
+    [data-dpr="4"] & {
+        #{$name}: $px * 4px;
+    }
+}
+
+@mixin px2rem($name, $px) {
+    #{$name}: $px / 64 * 1rem;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+html {
+    height: 100%
+}
+
+body {
+    @include px2px('font-size', 12);
+    //font-family: Arial, SimSun, '华文黑体', Georgia, Tahoma, Helvetica, 'MicrosoftYaHei', '微软雅黑', Sans-serif, 'STXihei', Hei, 'Hiragino Kaku Gothic Pro', SimSun;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*主页面*/
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.fl {
+    float: left;  
+}
+
+.fr {
+    float: right;
+}
+
